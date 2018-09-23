@@ -253,73 +253,39 @@ public class SpeechRecognition : MonoBehaviour
         {
             string intent = messageResponse.intents[0].intent;
             Debug.Log("Intent: " + intent);
-            string currentMat = null;
-            string currentScale = null;
-            string direction = null;
 
-            if (intent == "hello")
+            if (intent == "Hello")
             {
-                Debug.Log("ResultsField");
+                Debug.Log("Hello");
                 foreach (RuntimeEntity entity in messageResponse.entities)
                 {
-                    Debug.Log("hello");
-                    //direction = entity.value;
-                    //gameManager.MoveObject(direction);
+                    AkSoundEngine.PostEvent("Play_VO_MAXWELL_hello", gameObject);
                 }
             }
-            if (intent == "move")
+            if (intent == "Bye")
             {
+                Debug.Log("Bye");
                 foreach (RuntimeEntity entity in messageResponse.entities)
                 {
-                    Debug.Log("entityType: " + entity.entity + " , value: " + entity.value);
-                    direction = entity.value;
-                    //gameManager.MoveObject(direction);
+                    AkSoundEngine.PostEvent("Play_VO_MAXWELL_bye", gameObject);
                 }
             }
-            if (intent == "create")
+            if (intent == "Intro")
             {
-                bool createdObject = false;
+                Debug.Log("Intro");
                 foreach (RuntimeEntity entity in messageResponse.entities)
                 {
-                    Debug.Log("entityType: " + entity.entity + " , value: " + entity.value);
-                    if (entity.entity == "material")
-                    {
-                        currentMat = entity.value;
-                    }
-                    if (entity.entity == "scale")
-                    {
-                        currentScale = entity.value;
-                    }
-                    else if (entity.entity == "object")
-                    {
-                        //gameManager.CreateObject(entity.value, currentMat, currentScale);
-                        createdObject = true;
-                        currentMat = null;
-                        currentScale = null;
-                    }
+                    AkSoundEngine.PostEvent("Play_VO_MAXWELL_intro", gameObject);
                 }
-
-                if (!createdObject)
-                {
-                    //gameManager.PlayError(sorryClip);
-                }
-            }
-            else if (intent == "destroy")
-            {
-                //gameManager.DestroyAtPointer();
-            }
-            else if (intent == "help")
-            {
-                //if (helpClips.Count > 0)
-                //{
-                    //gameManager.PlayClip(helpClips[Random.Range(0, helpClips.Count)]);
-
-                //}
             }
         }
         else
         {
-            Debug.Log("Failed to invoke OnMessage();");
+            Debug.Log("Anything else");
+            foreach (RuntimeEntity entity in messageResponse.entities)
+            {
+                AkSoundEngine.PostEvent("Play_PR_VO_001300_MAXWELL_lift_off_01", gameObject);
+            }
         }
     }
 
