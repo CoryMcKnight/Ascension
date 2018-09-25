@@ -257,34 +257,38 @@ public class SpeechRecognition : MonoBehaviour
             if (intent == "Hello")
             {
                 Debug.Log("Hello");
+                AkSoundEngine.PostEvent("Play_VO_MAXWELL_hello", gameObject);
+
                 foreach (RuntimeEntity entity in messageResponse.entities)
                 {
-                    AkSoundEngine.PostEvent("Play_VO_MAXWELL_hello", gameObject);
                 }
             }
             if (intent == "Bye")
             {
                 Debug.Log("Bye");
+                AkSoundEngine.PostEvent("Play_VO_MAXWELL_bye", gameObject);
+
                 foreach (RuntimeEntity entity in messageResponse.entities)
                 {
-                    AkSoundEngine.PostEvent("Play_VO_MAXWELL_bye", gameObject);
                 }
             }
             if (intent == "Intro")
             {
                 Debug.Log("Intro");
+                AkSoundEngine.PostEvent("Play_VO_MAXWELL_intro", gameObject);
+
                 foreach (RuntimeEntity entity in messageResponse.entities)
                 {
-                    AkSoundEngine.PostEvent("Play_VO_MAXWELL_intro", gameObject);
                 }
             }
         }
         else
         {
             Debug.Log("Anything else");
+            AkSoundEngine.PostEvent("Play_PR_VO_001300_MAXWELL_lift_off_01", gameObject);
+
             foreach (RuntimeEntity entity in messageResponse.entities)
             {
-                AkSoundEngine.PostEvent("Play_PR_VO_001300_MAXWELL_lift_off_01", gameObject);
             }
         }
     }
