@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LightBehavior : MonoBehaviour {
-    int threshold = Random.Range(10, 14);
+    int threshold;
     public Light lt;
     public bool moodLighting = false;
     public bool lightingUp = true;
@@ -11,6 +11,7 @@ public class LightBehavior : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        threshold = Random.Range(10, 14);
         lt = GetComponent<Light>();
     }
 
