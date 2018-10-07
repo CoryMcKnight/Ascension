@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ff4100ea41620f9448ca48655166edd8
+guid: 8a7343d27bd2be84cada16ce60dd19e3
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -31,7 +31,12 @@ ModelImporter:
     4300004: ThrottleControl
     4300006: Joystick
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CockpitMaterial
+    second: {fileID: 2100000, guid: 47f03c0b7056cc543b81bdee079e74ad, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
