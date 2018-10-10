@@ -83,7 +83,7 @@ public class OVRPlayerController : MonoBehaviour
 	/// <summary>
 	/// Modifies the strength of gravity.
 	/// </summary>
-	public float GravityModifier = 0.379f;
+	public float GravityModifier = 0.0f;
 	
 	/// <summary>
 	/// If true, each OVRPlayerController will use the player's physical height.
@@ -252,7 +252,7 @@ public class OVRPlayerController : MonoBehaviour
 			CameraUpdated();
 		}
 
-		UpdateMovement();
+		//UpdateMovement();
 
 		Vector3 moveDirection = Vector3.zero;
 
@@ -265,7 +265,7 @@ public class OVRPlayerController : MonoBehaviour
 		moveDirection += MoveThrottle * SimulationRate * Time.deltaTime;
 
 		// Gravity
-		if (Controller.isGrounded && FallSpeed <= 0)
+		/*if (Controller.isGrounded && FallSpeed <= 0)
 			FallSpeed = ((Physics.gravity.y * (GravityModifier * 0.002f)));
 		else
 			FallSpeed += ((Physics.gravity.y * (GravityModifier * 0.002f)) * SimulationRate * Time.deltaTime);
@@ -284,7 +284,7 @@ public class OVRPlayerController : MonoBehaviour
 		{
 			PreCharacterMove();
 			Teleported = false;
-		}
+		}*/
 
 		Vector3 predictedXZ = Vector3.Scale((Controller.transform.localPosition + moveDirection), new Vector3(1, 0, 1));
 
@@ -300,7 +300,7 @@ public class OVRPlayerController : MonoBehaviour
 
 
 
-	public virtual void UpdateMovement()
+	/*public virtual void UpdateMovement()
 	{
 		if (HaltUpdateMovement)
 			return;
@@ -453,7 +453,7 @@ public class OVRPlayerController : MonoBehaviour
 
 			transform.rotation = Quaternion.Euler(euler);
 		}
-	}
+	}*/
 
 
 	/// <summary>
@@ -485,7 +485,7 @@ public class OVRPlayerController : MonoBehaviour
 	/// <summary>
 	/// Jump! Must be enabled manually.
 	/// </summary>
-	public bool Jump()
+	/*public bool Jump()
 	{
 		if (!Controller.isGrounded)
 			return false;
@@ -493,7 +493,7 @@ public class OVRPlayerController : MonoBehaviour
 		MoveThrottle += new Vector3(0, transform.lossyScale.y * JumpForce, 0);
 
 		return true;
-	}
+	}*/
 
 	/// <summary>
 	/// Stop this instance.

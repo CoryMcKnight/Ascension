@@ -191,8 +191,8 @@ MonoBehaviour:
     List: []
   BankWwu:
   - Guid: '{110A314C-82AF-4BAD-A4BF-89AA702B6B7A}'
-    m_lastTimePart2: -1999232791
-    m_lastTimePsrt1: 97069944
+    m_lastTimePart2: -1999229346
+    m_lastTimePsrt1: -1670357553
     ParentPhysicalPath: 
     PhysicalPath: SoundBanks\Default Work Unit.wwu
     List:
@@ -214,13 +214,58 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: VO_MAXWELL_Intro_Soundbank
         ObjectType: 7
+    - Guid: 69ae403b576f674d8e4f30059bdad1fb
+      ID: -2118801969
+      Name: VS_Ambience
+      Path: Default Work Unit\VS_Ambience
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: VS_Ambience
+        ObjectType: 7
   EventWwu:
   - Guid: '{DFCB7AA0-E338-4624-B782-27435196D705}'
-    m_lastTimePart2: -1999232792
-    m_lastTimePsrt1: -770292200
+    m_lastTimePart2: -1999229346
+    m_lastTimePsrt1: -1670456971
     ParentPhysicalPath: 
     PhysicalPath: Events\Default Work Unit.wwu
     List:
+    - Guid: 7f844705bf8fd04dbbb5c4bac4615909
+      ID: -1738939742
+      Name: Play_Amb_Shuttle_Engine_loop
+      Path: Default Work Unit\Play_Amb_Shuttle_Engine_loop
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Amb_Shuttle_Engine_loop
+        ObjectType: 3
+      maxAttenuation: 50
+      maxDuration: 0
+      minDuration: 0
+    - Guid: f070bb47c77c2c428c5ef5ab3def234f
+      ID: -541437794
+      Name: Play_Amb_Shuttle_Exterior_Wind_loop_L
+      Path: Default Work Unit\Play_Amb_Shuttle_Exterior_Wind_loop_L
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Amb_Shuttle_Exterior_Wind_loop_L
+        ObjectType: 3
+      maxAttenuation: 50
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 26601e552b67f04192313bc25240fda6
+      ID: -541437824
+      Name: Play_Amb_Shuttle_Exterior_Wind_loop_R
+      Path: Default Work Unit\Play_Amb_Shuttle_Exterior_Wind_loop_R
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Amb_Shuttle_Exterior_Wind_loop_R
+        ObjectType: 3
+      maxAttenuation: 50
+      maxDuration: 0
+      minDuration: 0
     - Guid: 51bc32454af41a4da72d382661a7adf5
       ID: -1972072314
       Name: Play_PR_VO_001000_MAXWELL_welcome_investigator_01
@@ -333,8 +378,6 @@ MonoBehaviour:
   - /Ascension_Wwise
   - /Ascension_Wwise/Events
   - /Ascension_Wwise/Events/Default Work Unit
-  - /Ascension_Wwise/SoundBanks
-  - /Ascension_Wwise/SoundBanks/Default Work Unit
   RtpcWwu:
   - Guid: '{9505FE3E-5B66-496D-A582-698E53A46146}'
     m_lastTimePart2: -1999234755
