@@ -16,6 +16,7 @@ namespace AK
         static const AkUniqueID PLAY_AMB_SHUTTLE_ENGINE_LOOP = 2556027554U;
         static const AkUniqueID PLAY_AMB_SHUTTLE_EXTERIOR_WIND_LOOP_L = 3753529502U;
         static const AkUniqueID PLAY_AMB_SHUTTLE_EXTERIOR_WIND_LOOP_R = 3753529472U;
+        static const AkUniqueID PLAY_PLAYER_MIC_INPUT = 4073690464U;
         static const AkUniqueID PLAY_PR_VO_001000_MAXWELL_WELCOME_INVESTIGATOR_01 = 2322894982U;
         static const AkUniqueID PLAY_PR_VO_001100_MAXWELL_READ_THE_TITLE_FOR_01 = 2359030514U;
         static const AkUniqueID PLAY_PR_VO_001200_MAXWELL_GOOD_LETS_BEGIN_THE_01 = 3180757426U;
@@ -46,6 +47,7 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
+        static const AkUniqueID PLAYER_MIC_INPUT_SOUNDBANK = 1426945817U;
         static const AkUniqueID VO_MAXWELL_GLOBAL_SOUNDBANK = 3393795557U;
         static const AkUniqueID VO_MAXWELL_INTRO_SOUNDBANK = 3306976482U;
         static const AkUniqueID VS_AMBIENCE = 2176165327U;
@@ -56,6 +58,11 @@ namespace AK
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MOTION_FACTORY_BUS = 985987111U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID REVERB_SCENE0 = 1733862568U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {
