@@ -184,18 +184,38 @@ MonoBehaviour:
         ObjectType: 15
   AuxBusWwu:
   - Guid: '{2B7998AC-AFC2-411A-A976-C2952A194868}'
-    m_lastTimePart2: -1999234755
-    m_lastTimePsrt1: 1399622195
+    m_lastTimePart2: -1999228949
+    m_lastTimePsrt1: -1417701843
     ParentPhysicalPath: 
     PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
-    List: []
+    List:
+    - Guid: 800bfa294ffbf94eb8e50820b92d354d
+      ID: 1733862568
+      Name: Reverb_Scene0
+      Path: Default Work Unit\Master Audio Bus\Reverb_Scene0
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Reverb_Scene0
+        ObjectType: 1
   BankWwu:
   - Guid: '{110A314C-82AF-4BAD-A4BF-89AA702B6B7A}'
-    m_lastTimePart2: -1999229346
-    m_lastTimePsrt1: -1670357553
+    m_lastTimePart2: -1999228918
+    m_lastTimePsrt1: 1491581613
     ParentPhysicalPath: 
     PhysicalPath: SoundBanks\Default Work Unit.wwu
     List:
+    - Guid: 2648cfe31d7c514bb06c2e79f3c4bf8e
+      ID: 1426945817
+      Name: Player_Mic_Input_Soundbank
+      Path: Default Work Unit\Player_Mic_Input_Soundbank
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player_Mic_Input_Soundbank
+        ObjectType: 7
     - Guid: f4e03270f34de441a9c8315ffce28f70
       ID: -901171739
       Name: VO_MAXWELL_Global_Soundbank
@@ -223,10 +243,19 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: VS_Ambience
         ObjectType: 7
+    - Guid: 17c4af2364f60649ba040308052665ba
+      ID: 386084932
+      Name: VS_S0_Soundbank
+      Path: Default Work Unit\VS_S0_Soundbank
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: VS_S0_Soundbank
+        ObjectType: 7
   EventWwu:
   - Guid: '{DFCB7AA0-E338-4624-B782-27435196D705}'
-    m_lastTimePart2: -1999229346
-    m_lastTimePsrt1: -1670456971
+    m_lastTimePart2: -1999228918
+    m_lastTimePsrt1: 1491481962
     ParentPhysicalPath: 
     PhysicalPath: Events\Default Work Unit.wwu
     List:
@@ -239,7 +268,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Play_Amb_Shuttle_Engine_loop
         ObjectType: 3
-      maxAttenuation: 50
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - Guid: f070bb47c77c2c428c5ef5ab3def234f
@@ -251,7 +280,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Play_Amb_Shuttle_Exterior_Wind_loop_L
         ObjectType: 3
-      maxAttenuation: 50
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - Guid: 26601e552b67f04192313bc25240fda6
@@ -263,7 +292,19 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Play_Amb_Shuttle_Exterior_Wind_loop_R
         ObjectType: 3
-      maxAttenuation: 50
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 985f8b6d7f274b4eaff4c9eeea42c643
+      ID: -221276832
+      Name: Play_Player_Mic_Input
+      Path: Default Work Unit\Play_Player_Mic_Input
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Player_Mic_Input
+        ObjectType: 3
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - Guid: 51bc32454af41a4da72d382661a7adf5
@@ -310,6 +351,18 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Play_PR_VO_001300_MAXWELL_lift_off_01
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: eddc684754cd4647b578aa4017d9b470
+      ID: -609048168
+      Name: Play_VO_JPLENGINEER_S0_intro
+      Path: Default Work Unit\Play_VO_JPLENGINEER_S0_intro
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_VO_JPLENGINEER_S0_intro
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
@@ -378,6 +431,8 @@ MonoBehaviour:
   - /Ascension_Wwise
   - /Ascension_Wwise/Events
   - /Ascension_Wwise/Events/Default Work Unit
+  - /Ascension_Wwise/SoundBanks
+  - /Ascension_Wwise/SoundBanks/Default Work Unit
   RtpcWwu:
   - Guid: '{9505FE3E-5B66-496D-A582-698E53A46146}'
     m_lastTimePart2: -1999234755

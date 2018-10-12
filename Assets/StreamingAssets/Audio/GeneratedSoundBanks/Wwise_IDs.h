@@ -21,6 +21,7 @@ namespace AK
         static const AkUniqueID PLAY_PR_VO_001100_MAXWELL_READ_THE_TITLE_FOR_01 = 2359030514U;
         static const AkUniqueID PLAY_PR_VO_001200_MAXWELL_GOOD_LETS_BEGIN_THE_01 = 3180757426U;
         static const AkUniqueID PLAY_PR_VO_001300_MAXWELL_LIFT_OFF_01 = 3505521934U;
+        static const AkUniqueID PLAY_VO_JPLENGINEER_S0_INTRO = 3685919128U;
         static const AkUniqueID PLAY_VO_MAXWELL_BYE = 3603876969U;
         static const AkUniqueID PLAY_VO_MAXWELL_HELLO = 2014175889U;
         static const AkUniqueID PLAY_VO_MAXWELL_INTRO = 2832798595U;
@@ -51,6 +52,7 @@ namespace AK
         static const AkUniqueID VO_MAXWELL_GLOBAL_SOUNDBANK = 3393795557U;
         static const AkUniqueID VO_MAXWELL_INTRO_SOUNDBANK = 3306976482U;
         static const AkUniqueID VS_AMBIENCE = 2176165327U;
+        static const AkUniqueID VS_S0_SOUNDBANK = 386084932U;
     } // namespace BANKS
 
     namespace BUSSES
