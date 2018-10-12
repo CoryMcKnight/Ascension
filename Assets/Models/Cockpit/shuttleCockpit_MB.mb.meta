@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e6f98af35648ed041ab25a1756e7d64c
+guid: 9fc31627d2dbf844cb46f83fbc3513a4
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -14,10 +14,24 @@ ModelImporter:
     400006: VA_HeavyFighterCockpit1_Base
     400008: VA_HeavyFighterCockpit1_Glass
     2100000: CockpitMaterial
-    2300000: VA_HeavyFighterCockpit1_Base
-    3300000: VA_HeavyFighterCockpit1_Base
+    2100002: ScreenRight
+    2100004: ScreenMid
+    2100006: ScreenLeft
+    2100008: Glass
+    2300000: Joystick
+    2300002: ThrottleControl
+    2300004: VA_HeavyFighterCockpit1_Base
+    2300006: VA_HeavyFighterCockpit1_Glass
+    3300000: Joystick
+    3300002: ThrottleControl
+    3300004: VA_HeavyFighterCockpit1_Base
+    3300006: VA_HeavyFighterCockpit1_Glass
     4300000: VA_HeavyFighterCockpit1_Base
+    4300002: VA_HeavyFighterCockpit1_Glass
+    4300004: ThrottleControl
+    4300006: Joystick
     9500000: //RootNode
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
