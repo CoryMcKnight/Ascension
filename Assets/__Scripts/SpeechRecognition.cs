@@ -54,13 +54,15 @@ public class SpeechRecognition : MonoBehaviour
     private string _conversationVersionDate = "2018-09-13";
     private string convo_workspaceId = "5794a517-db45-4cb9-8834-e74b86f76f7e";
 
-    public Text ResultsField;
+    //public Text ResultsField;
 
     private int _recordingRoutine = 0;
     private string _microphoneID = null;
     private AudioClip _recording = null;
     private int _recordingBufferSize = 1;
     private int _recordingHZ = 22050;
+
+    GameControllerS0 gameControllerS0;
 
 
     void Start()
@@ -77,6 +79,8 @@ public class SpeechRecognition : MonoBehaviour
         Active = true;
 
         StartRecording();
+
+        gameControllerS0 = GameObject.Find("GameController").GetComponent<GameControllerS0>();
     }
 
     public bool Active
@@ -263,7 +267,7 @@ public class SpeechRecognition : MonoBehaviour
                 {
                 }
             }
-            if (intent == "Bye")
+            else if (intent == "Bye")
             {
                 Debug.Log("Bye");
                 AkSoundEngine.PostEvent("Play_VO_MAXWELL_bye", gameObject);
@@ -272,10 +276,19 @@ public class SpeechRecognition : MonoBehaviour
                 {
                 }
             }
-            if (intent == "Intro")
+            else if (intent == "Intro")
             {
                 Debug.Log("Intro");
                 AkSoundEngine.PostEvent("Play_VO_MAXWELL_intro", gameObject);
+
+                foreach (RuntimeEntity entity in messageResponse.entities)
+                {
+                }
+            }
+            else if (intent == "Countdown")
+            {
+                Debug.Log("Countdown");
+                gameControllerS0.hasCountedDown = true;
 
                 foreach (RuntimeEntity entity in messageResponse.entities)
                 {
@@ -285,7 +298,7 @@ public class SpeechRecognition : MonoBehaviour
         else
         {
             Debug.Log("Anything else");
-            AkSoundEngine.PostEvent("Play_PR_VO_001300_MAXWELL_lift_off_01", gameObject);
+            //AkSoundEngine.PostEvent("Play_PR_VO_001300_MAXWELL_lift_off_01", gameObject);
 
             foreach (RuntimeEntity entity in messageResponse.entities)
             {

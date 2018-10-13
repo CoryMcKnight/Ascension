@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameControllerS0 : MonoBehaviour {
 
     public bool isPlayingVO;
+    public bool hasCountedDown;
 
     public GameObject Lights1;
     public GameObject Lights2;
@@ -17,10 +18,16 @@ public class GameControllerS0 : MonoBehaviour {
     private bool hasPlayedIntroVO = false;
     private bool hasTurnedOnLights = false;
     private bool hasStartedShuttle = false;
+    private bool isPlayingLights1 = false;
+    private bool isPlayingLights2 = false;
+    private bool isPlayingLights3 = false;
+    private bool isPlayingIgnition = false;
+    private bool isPlayingLiftoff = false;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         isPlayingVO = false;
+        hasCountedDown = false;
     }
 	
 	// Update is called once per frame
@@ -33,12 +40,12 @@ public class GameControllerS0 : MonoBehaviour {
             hasPlayedIntroVO = true;
         }
 
-        else if (isPlayingVO == false && hasPlayedIntroVO == true && hasTurnedOnLights == false)
+        else if (isPlayingVO == false && hasPlayedIntroVO == true && hasTurnedOnLights == false && hasCountedDown == true)
         {
             StartCoroutine(TurnOnLights());
         }
 
-        else if (isPlayingVO == false && hasPlayedIntroVO == true && hasTurnedOnLights == true && hasStartedShuttle == false)
+        else if (isPlayingVO == false && hasPlayedIntroVO == true && hasTurnedOnLights == true && hasCountedDown == true && hasStartedShuttle == false)
         {
             StartCoroutine(StartShuttle());
         }
@@ -57,11 +64,31 @@ public class GameControllerS0 : MonoBehaviour {
     IEnumerator TurnOnLights()
     {
         Lights1.SetActive(true);
+        if (isPlayingLights1 == false)
+        {
+            AkSoundEngine.PostEvent("Play_Lights_Rafter_On", Lights1);
+            isPlayingLights1 = true;
+        }
         yield return new WaitForSeconds(3);
         Lights2.SetActive(true);
+        if (isPlayingLights2 == false)
+        {
+            AkSoundEngine.PostEvent("Play_Lights_Rafter_On", Lights2);
+            isPlayingLights2 = true;
+        }
         yield return new WaitForSeconds(2);
         Lights3.SetActive(true);
+        if (isPlayingLights3 == false)
+        {
+            AkSoundEngine.PostEvent("Play_Lights_Rafter_On", Lights3);
+            isPlayingLights3 = true;
+        }
         hasTurnedOnLights = true;
+        if (isPlayingIgnition == false)
+        {
+            AkSoundEngine.PostEvent("Play_Shuttle_Engine_Ignition_01", Shuttle);
+            isPlayingIgnition = true;
+        }
     }
 
     IEnumerator StartShuttle()
@@ -69,6 +96,11 @@ public class GameControllerS0 : MonoBehaviour {
         Jets.SetActive(true);
         Title.SetActive(true);
         Shuttle.GetComponent<ShuttleUp>().enabled = true;
+        if (isPlayingLiftoff == false)
+        {
+            AkSoundEngine.PostEvent("Play_Shuttle_Liftoff_01", Shuttle);
+            isPlayingLiftoff = true;
+        }
         yield return new WaitForSeconds(3);
         Jets.SetActive(false);
     }
