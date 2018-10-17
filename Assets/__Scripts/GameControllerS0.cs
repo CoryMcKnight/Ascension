@@ -1,11 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameControllerS0 : MonoBehaviour {
 
     public bool isPlayingVO;
     public bool hasCountedDown;
+    public bool hasLiftedOff;
+    public GameObject speechRecognition;
+    public GameObject Maxwell;
+
+    public string levelName;
 
     public GameObject Lights1;
     public GameObject Lights2;
@@ -16,6 +22,7 @@ public class GameControllerS0 : MonoBehaviour {
     public GameObject Shuttle;
 
     private bool hasPlayedIntroVO = false;
+    private bool hasPlayedMaxwellVO = false;
     private bool hasTurnedOnLights = false;
     private bool hasStartedShuttle = false;
     private bool isPlayingLights1 = false;
@@ -28,10 +35,22 @@ public class GameControllerS0 : MonoBehaviour {
     void Start () {
         isPlayingVO = false;
         hasCountedDown = false;
+        hasLiftedOff = false;
     }
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (isPlayingVO == true) //turn off speech recognition when VO is playing
+        {
+            speechRecognition.GetComponent<SpeechRecognition>().enabled = false;
+        }
+
+        if (isPlayingVO == false) //turn on speech recognition when VO is not playing
+        {
+            speechRecognition.GetComponent<SpeechRecognition>().enabled = true;
+        }
+
         if (isPlayingVO == false && hasPlayedIntroVO == false)
         {
             object myCookie = new object();
@@ -45,7 +64,15 @@ public class GameControllerS0 : MonoBehaviour {
             StartCoroutine(TurnOnLights());
         }
 
-        else if (isPlayingVO == false && hasPlayedIntroVO == true && hasTurnedOnLights == true && hasCountedDown == true && hasStartedShuttle == false)
+        else if (isPlayingVO == false && hasPlayedIntroVO == true && hasTurnedOnLights == true && hasCountedDown == true && hasPlayedMaxwellVO == false && hasStartedShuttle == false)
+        {
+            object myCookie = new object();
+            isPlayingVO = true;
+            AkSoundEngine.PostEvent("Play_PR_VO_001300_MAXWELL_when_youre_ready_to_01", Maxwell, (uint)AkCallbackType.AK_EndOfEvent, CheckWhenFinished, myCookie);
+            hasPlayedMaxwellVO = true;
+        }
+
+        else if (isPlayingVO == false && hasPlayedIntroVO == true && hasTurnedOnLights == true && hasCountedDown == true && hasPlayedMaxwellVO == true && hasLiftedOff == true && hasStartedShuttle == false)
         {
             StartCoroutine(StartShuttle());
         }
@@ -103,5 +130,8 @@ public class GameControllerS0 : MonoBehaviour {
         }
         yield return new WaitForSeconds(3);
         Jets.SetActive(false);
+        yield return new WaitForSeconds(10);
+        SceneManager.LoadScene(levelName);
+
     }
 }

@@ -17,14 +17,14 @@ MonoBehaviour:
   m_lastPopulateTimePsrt1: 0
   AcousticTextureWwu:
   - Guid: '{401C18F0-4F7C-47AF-BF30-C25BEB0C32E6}'
-    m_lastTimePart2: -1999234755
-    m_lastTimePsrt1: 924809350
+    m_lastTimePart2: -1999228552
+    m_lastTimePsrt1: 551169263
     ParentPhysicalPath: 
     PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     List: []
   - Guid: '{463D666B-3CA8-4FA5-8B4A-5FEF12B883F6}'
-    m_lastTimePart2: -1999234758
-    m_lastTimePsrt1: -701719189
+    m_lastTimePart2: -1999228552
+    m_lastTimePsrt1: 551458474
     ParentPhysicalPath: 
     PhysicalPath: Virtual Acoustics\Factory Reflect Acoustic Textures.wwu
     List:
@@ -184,8 +184,8 @@ MonoBehaviour:
         ObjectType: 15
   AuxBusWwu:
   - Guid: '{2B7998AC-AFC2-411A-A976-C2952A194868}'
-    m_lastTimePart2: -1999228949
-    m_lastTimePsrt1: -1417701843
+    m_lastTimePart2: -1999228552
+    m_lastTimePsrt1: 547569164
     ParentPhysicalPath: 
     PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     List:
@@ -202,8 +202,8 @@ MonoBehaviour:
         ObjectType: 1
   BankWwu:
   - Guid: '{110A314C-82AF-4BAD-A4BF-89AA702B6B7A}'
-    m_lastTimePart2: -1999228918
-    m_lastTimePsrt1: 1491581613
+    m_lastTimePart2: -1999227904
+    m_lastTimePsrt1: 1460095073
     ParentPhysicalPath: 
     PhysicalPath: SoundBanks\Default Work Unit.wwu
     List:
@@ -252,10 +252,19 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: VS_S0_Soundbank
         ObjectType: 7
+    - Guid: 33f75e24893cd84b909565bb73a7410d
+      ID: -1371782880
+      Name: VS_S0_Soundbank_SFX
+      Path: Default Work Unit\VS_S0_Soundbank_SFX
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: VS_S0_Soundbank_SFX
+        ObjectType: 7
   EventWwu:
   - Guid: '{DFCB7AA0-E338-4624-B782-27435196D705}'
-    m_lastTimePart2: -1999228918
-    m_lastTimePsrt1: 1491481962
+    m_lastTimePart2: -1999227923
+    m_lastTimePsrt1: -2042958372
     ParentPhysicalPath: 
     PhysicalPath: Events\Default Work Unit.wwu
     List:
@@ -268,7 +277,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Play_Amb_Shuttle_Engine_loop
         ObjectType: 3
-      maxAttenuation: 0
+      maxAttenuation: 50
       maxDuration: 0
       minDuration: 0
     - Guid: f070bb47c77c2c428c5ef5ab3def234f
@@ -280,7 +289,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Play_Amb_Shuttle_Exterior_Wind_loop_L
         ObjectType: 3
-      maxAttenuation: 0
+      maxAttenuation: 50
       maxDuration: 0
       minDuration: 0
     - Guid: 26601e552b67f04192313bc25240fda6
@@ -291,6 +300,18 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Play_Amb_Shuttle_Exterior_Wind_loop_R
+        ObjectType: 3
+      maxAttenuation: 50
+      maxDuration: 0
+      minDuration: 0
+    - Guid: f67ddeced3d79543aaba54966251f412
+      ID: 1075958136
+      Name: Play_Lights_Rafter_On
+      Path: Default Work Unit\Play_Lights_Rafter_On
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Lights_Rafter_On
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
@@ -344,13 +365,37 @@ MonoBehaviour:
       maxDuration: 0
       minDuration: 0
     - Guid: b0fe061f21ef63439b71bc6b64aedade
-      ID: -789445362
-      Name: Play_PR_VO_001300_MAXWELL_lift_off_01
-      Path: Default Work Unit\Play_PR_VO_001300_MAXWELL_lift_off_01
+      ID: -1418855456
+      Name: Play_PR_VO_001300_MAXWELL_when_youre_ready_to_01
+      Path: Default Work Unit\Play_PR_VO_001300_MAXWELL_when_youre_ready_to_01
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Play_PR_VO_001300_MAXWELL_lift_off_01
+      - ElementName: Play_PR_VO_001300_MAXWELL_when_youre_ready_to_01
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: c2a9915d1cacab49bcf4f7594b56efbb
+      ID: 855796338
+      Name: Play_Shuttle_Engine_Ignition_01
+      Path: Default Work Unit\Play_Shuttle_Engine_Ignition_01
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Shuttle_Engine_Ignition_01
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 5a923bb70e84dc45a1195191a5ed8f07
+      ID: 576714568
+      Name: Play_Shuttle_Liftoff_01
+      Path: Default Work Unit\Play_Shuttle_Liftoff_01
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Shuttle_Liftoff_01
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
@@ -435,14 +480,14 @@ MonoBehaviour:
   - /Ascension_Wwise/SoundBanks/Default Work Unit
   RtpcWwu:
   - Guid: '{9505FE3E-5B66-496D-A582-698E53A46146}'
-    m_lastTimePart2: -1999234755
-    m_lastTimePsrt1: 926717219
+    m_lastTimePart2: -1999228552
+    m_lastTimePsrt1: 550560852
     ParentPhysicalPath: 
     PhysicalPath: Game Parameters\Default Work Unit.wwu
     List: []
   - Guid: '{D7135222-D1DB-42D0-ADC0-930743567776}'
-    m_lastTimePart2: -1999234758
-    m_lastTimePsrt1: -1626033702
+    m_lastTimePart2: -1999228552
+    m_lastTimePsrt1: 548926407
     ParentPhysicalPath: 
     PhysicalPath: Game Parameters\Factory Motion.wwu
     List:
@@ -465,8 +510,8 @@ MonoBehaviour:
       - ElementName: RPM
         ObjectType: 13
   - Guid: '{3B167755-FB42-458B-98BF-96F557AFB3B9}'
-    m_lastTimePart2: -1999234758
-    m_lastTimePsrt1: -751545601
+    m_lastTimePart2: -1999228552
+    m_lastTimePsrt1: 549470031
     ParentPhysicalPath: 
     PhysicalPath: Game Parameters\Factory SoundSeed Air Game Syncs.wwu
     List:
@@ -562,22 +607,22 @@ MonoBehaviour:
         ObjectType: 13
   StateWwu:
   - Guid: '{D7814CEA-6FDD-470F-8517-EF9049D8AAD2}'
-    m_lastTimePart2: -1999234755
-    m_lastTimePsrt1: 926164358
+    m_lastTimePart2: -1999228552
+    m_lastTimePsrt1: 550400951
     ParentPhysicalPath: 
     PhysicalPath: States\Default Work Unit.wwu
     List: []
   SwitchWwu:
   - Guid: '{A03D5ABE-2DED-4386-8DD2-77D490B693A0}'
-    m_lastTimePart2: -1999234755
-    m_lastTimePsrt1: 925925615
+    m_lastTimePart2: -1999228552
+    m_lastTimePsrt1: 549759252
     ParentPhysicalPath: 
     PhysicalPath: Switches\Default Work Unit.wwu
     List: []
   TriggerWwu:
   - Guid: '{BCA69A52-FE52-467E-8270-7B0B920F26C9}'
-    m_lastTimePart2: -1999234755
-    m_lastTimePsrt1: 928073193
+    m_lastTimePart2: -1999228552
+    m_lastTimePsrt1: 550959825
     ParentPhysicalPath: 
     PhysicalPath: Triggers\Default Work Unit.wwu
     List: []

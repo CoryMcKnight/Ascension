@@ -294,6 +294,15 @@ public class SpeechRecognition : MonoBehaviour
                 {
                 }
             }
+            else if (intent == "Liftoff")
+            {
+                Debug.Log("Liftoff");
+                gameControllerS0.hasLiftedOff = true;
+
+                foreach (RuntimeEntity entity in messageResponse.entities)
+                {
+                }
+            }
         }
         else
         {

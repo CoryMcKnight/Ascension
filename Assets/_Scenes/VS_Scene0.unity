@@ -350,9 +350,18 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 85ec80cbaa7f5544db323e41aba8cfba, type: 2}
+    - target: {fileID: 100146, guid: 62f156cfabecb754fb863bd7424a3cb4, type: 3}
+      propertyPath: m_Name
+      value: Maxwell
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62f156cfabecb754fb863bd7424a3cb4, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &119897236 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100146, guid: 62f156cfabecb754fb863bd7424a3cb4,
+    type: 3}
+  m_PrefabInternal: {fileID: 119897235}
 --- !u!1001 &124337792
 Prefab:
   m_ObjectHideFlags: 0
@@ -1186,6 +1195,7 @@ GameObject:
   - component: {fileID: 616972509}
   - component: {fileID: 616972511}
   - component: {fileID: 616972512}
+  - component: {fileID: 616972513}
   m_Layer: 0
   m_Name: WwiseSoundbanks
   m_TagString: Untagged
@@ -1263,6 +1273,25 @@ MonoBehaviour:
   saveDecodedBank: 0
   unloadTriggerList: 958ca0ea
   valueGuid: f4e03270f34de441a9c8315ffce28f70
+--- !u!114 &616972513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 616972508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7d0145578a42c4b93373bcb557495b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  bankName: Player_Mic_Input_Soundbank
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  valueGuid: 2648cfe31d7c514bb06c2e79f3c4bf8e
 --- !u!1 &682591477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,7 +1724,7 @@ GameObject:
   - component: {fileID: 1242343943}
   - component: {fileID: 1242343942}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1710,9 +1739,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 38bacdb7f7f27d6418d029c171d3baab, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8d710aa9f6b181d45945bb069909a2fb, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.949
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2726,6 +2755,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayingVO: 0
   hasCountedDown: 0
+  hasLiftedOff: 0
+  speechRecognition: {fileID: 1446302521}
+  Maxwell: {fileID: 119897236}
+  levelName: VS_Scene1
   Lights1: {fileID: 425634733}
   Lights2: {fileID: 285501100}
   Lights3: {fileID: 1352854024}
@@ -2934,8 +2967,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axes: 0
-  sensitivityX: 15
-  sensitivityY: 15
+  sensitivityX: 5
+  sensitivityY: 5
   minimumX: -360
   maximumX: 360
   minimumY: -60
