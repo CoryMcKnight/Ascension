@@ -21,12 +21,23 @@ namespace AK
         static const AkUniqueID PLAY_PR_VO_001300_MAXWELL_WHEN_YOURE_READY_TO_01 = 2876111840U;
         static const AkUniqueID PLAY_SHUTTLE_ENGINE_IGNITION_01 = 855796338U;
         static const AkUniqueID PLAY_SHUTTLE_LIFTOFF_01 = 576714568U;
+        static const AkUniqueID PLAY_VO_COMMANDER_BACKSTORY_WHERE = 3517861429U;
+        static const AkUniqueID PLAY_VO_COMMANDER_BACKSTORY_WHO = 2753132348U;
+        static const AkUniqueID PLAY_VO_COMMANDER_BYE = 3373178765U;
+        static const AkUniqueID PLAY_VO_COMMANDER_HELLO = 62458029U;
+        static const AkUniqueID PLAY_VO_COMMANDER_HOWAREYOU = 254179248U;
+        static const AkUniqueID PLAY_VO_COMMANDER_INTRO = 575232135U;
+        static const AkUniqueID PLAY_VO_COMMANDER_NARRATIVE_HOUSTON = 2196910600U;
+        static const AkUniqueID PLAY_VO_COMMANDER_NARRATIVE_TASK = 586712829U;
+        static const AkUniqueID PLAY_VO_COMMANDER_NARRATIVE_WHEN = 3626174950U;
+        static const AkUniqueID PLAY_VO_COMMANDER_NARRATIVE_WHERE = 958969067U;
+        static const AkUniqueID PLAY_VO_COMMANDER_NICETOMEETYOU = 2000773447U;
         static const AkUniqueID PLAY_VO_JPLENGINEER_S0_INTRO = 3685919128U;
         static const AkUniqueID PLAY_VO_MAXWELL_BYE = 3603876969U;
         static const AkUniqueID PLAY_VO_MAXWELL_HELLO = 2014175889U;
+        static const AkUniqueID PLAY_VO_MAXWELL_HOWAREYOU = 1046929596U;
         static const AkUniqueID PLAY_VO_MAXWELL_INTRO = 2832798595U;
-        static const AkUniqueID PLAY_VO_MAXWELL_PLEASANTRIES_HOWAREYOU = 4106686052U;
-        static const AkUniqueID PLAY_VO_MAXWELL_PLEASANTRIES_NICETOMEETYOU = 4123130467U;
+        static const AkUniqueID PLAY_VO_MAXWELL_NICETOMEETYOU = 1277895451U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
@@ -49,6 +60,7 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID PLAYER_MIC_INPUT_SOUNDBANK = 1426945817U;
+        static const AkUniqueID S1_VO_SOUNDBANK = 20597623U;
         static const AkUniqueID VO_MAXWELL_GLOBAL_SOUNDBANK = 3393795557U;
         static const AkUniqueID VO_MAXWELL_INTRO_SOUNDBANK = 3306976482U;
         static const AkUniqueID VS_AMBIENCE = 2176165327U;
