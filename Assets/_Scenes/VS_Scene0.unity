@@ -1194,7 +1194,6 @@ GameObject:
   - component: {fileID: 616972510}
   - component: {fileID: 616972509}
   - component: {fileID: 616972511}
-  - component: {fileID: 616972512}
   - component: {fileID: 616972513}
   m_Layer: 0
   m_Name: WwiseSoundbanks
@@ -1254,25 +1253,6 @@ MonoBehaviour:
   saveDecodedBank: 0
   unloadTriggerList: 958ca0ea
   valueGuid: 33f75e24893cd84b909565bb73a7410d
---- !u!114 &616972512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 616972508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d7d0145578a42c4b93373bcb557495b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  bankName: VO_MAXWELL_Global_Soundbank
-  decodeBank: 0
-  loadAsynchronous: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
-  valueGuid: f4e03270f34de441a9c8315ffce28f70
 --- !u!114 &616972513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2756,7 +2736,11 @@ MonoBehaviour:
   isPlayingVO: 0
   hasCountedDown: 0
   hasLiftedOff: 0
-  speechRecognition: {fileID: 1446302521}
+  hello: 0
+  howAreYou: 0
+  bye: 0
+  niceToMeetYou: 0
+  intro: 0
   Maxwell: {fileID: 119897236}
   levelName: VS_Scene1
   Lights1: {fileID: 425634733}

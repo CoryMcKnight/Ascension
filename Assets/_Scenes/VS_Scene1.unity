@@ -518,6 +518,64 @@ Transform:
   m_Father: {fileID: 682194924}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &116223743
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 116223745}
+  - component: {fileID: 116223744}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &116223744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 116223743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ecfab0a03134c447a433c969d2d0adb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayingVO: 0
+  hello: 0
+  howAreYou: 0
+  bye: 0
+  niceToMeetYou: 0
+  intro: 0
+  backstoryWhere: 0
+  backstoryWho: 0
+  narrativeHouston: 0
+  narrativeTask: 0
+  narrativeWhen: 0
+  narrativeWhere: 0
+  Maxwell: {fileID: 1199319255}
+  Commander: {fileID: 2096535900}
+  Engineer: {fileID: 1199319255}
+  Doctor: {fileID: 525749264}
+  Biologist: {fileID: 661118484}
+  conversationState: 0
+--- !u!4 &116223745
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 116223743}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &120425808
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,7 +1151,7 @@ Transform:
   - {fileID: 751173850}
   - {fileID: 1970710777}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: -83.934006, z: 0}
 --- !u!4 &252359096
 Transform:
@@ -2403,6 +2461,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23d2fc6ad228b6f44a1d9b0ed139a76d, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &525749264 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100146, guid: 23d2fc6ad228b6f44a1d9b0ed139a76d,
+    type: 3}
+  m_PrefabInternal: {fileID: 525749263}
 --- !u!1 &535449810
 GameObject:
   m_ObjectHideFlags: 0
@@ -2775,6 +2838,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eacba58bad7644943885ac5d39126a14, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &661118484 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100146, guid: eacba58bad7644943885ac5d39126a14,
+    type: 3}
+  m_PrefabInternal: {fileID: 661118483}
 --- !u!1 &682194923
 GameObject:
   m_ObjectHideFlags: 0
@@ -3671,7 +3739,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &938890857
 GameObject:
@@ -3803,7 +3871,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 458990, guid: 4f35fa249b5008c44ac2998be6f82d4d, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 458990, guid: 4f35fa249b5008c44ac2998be6f82d4d, type: 2}
       propertyPath: m_LocalScale.x
@@ -4775,6 +4843,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82bd01dd015f46542bdfd0732bea479a, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &1199319255 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100008, guid: 82bd01dd015f46542bdfd0732bea479a,
+    type: 3}
+  m_PrefabInternal: {fileID: 1199319254}
 --- !u!1 &1207519277
 GameObject:
   m_ObjectHideFlags: 0
@@ -6245,7 +6318,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1605747764
 GameObject:
@@ -6717,7 +6790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1756736880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6726,7 +6799,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1756736879}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6568a83a4d09434287deb0f44bc885a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c9ad7099ad32df449488d6bd1dae019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1756736881
@@ -6861,8 +6934,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1834321205}
   - component: {fileID: 1834321204}
-  - component: {fileID: 1834321203}
   - component: {fileID: 1834321206}
+  - component: {fileID: 1834321203}
   m_Layer: 0
   m_Name: WwiseSoundbanks
   m_TagString: Untagged
@@ -6883,12 +6956,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerList: f7e1664c
   useOtherObject: 0
-  bankName: VO_MAXWELL_Intro_Soundbank
+  bankName: VS_S0_Soundbank
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
   unloadTriggerList: 958ca0ea
-  valueGuid: 25e8489962c7d14ea64523a7c7024361
+  valueGuid: 17c4af2364f60649ba040308052665ba
 --- !u!114 &1834321204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6902,12 +6975,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerList: f7e1664c
   useOtherObject: 0
-  bankName: VO_MAXWELL_Global_Soundbank
+  bankName: S1_VO_Soundbank
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
   unloadTriggerList: 958ca0ea
-  valueGuid: f4e03270f34de441a9c8315ffce28f70
+  valueGuid: ec7090e24231d346a94195a349cf200b
 --- !u!4 &1834321205
 Transform:
   m_ObjectHideFlags: 0
@@ -6919,7 +6992,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1834321206
 MonoBehaviour:
@@ -7607,6 +7680,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e43d00f0415beb41a022b3f6dc76a9c, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &2096535900 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100146, guid: 5e43d00f0415beb41a022b3f6dc76a9c,
+    type: 3}
+  m_PrefabInternal: {fileID: 2096535899}
 --- !u!1 &2119671210
 GameObject:
   m_ObjectHideFlags: 0

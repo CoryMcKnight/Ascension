@@ -6,9 +6,17 @@ using UnityEngine.SceneManagement;
 public class GameControllerS0 : MonoBehaviour {
 
     public bool isPlayingVO;
-    public bool hasCountedDown;
-    public bool hasLiftedOff;
-    public GameObject speechRecognition;
+
+    //IBM Watson Intents
+    [HideInInspector] public bool hasCountedDown;
+    [HideInInspector] public bool hasLiftedOff;
+    [HideInInspector] public bool hello;
+    [HideInInspector] public bool howAreYou;
+    [HideInInspector] public bool bye;
+    [HideInInspector] public bool niceToMeetYou;
+    [HideInInspector] public bool intro;
+
+    //public GameObject speechRecognition;
     public GameObject Maxwell;
 
     public string levelName;
@@ -41,7 +49,7 @@ public class GameControllerS0 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (isPlayingVO == true) //turn off speech recognition when VO is playing
+        /*if (isPlayingVO == true) //turn off speech recognition when VO is playing
         {
             speechRecognition.GetComponent<SpeechRecognition>().enabled = false;
         }
@@ -49,7 +57,7 @@ public class GameControllerS0 : MonoBehaviour {
         if (isPlayingVO == false) //turn on speech recognition when VO is not playing
         {
             speechRecognition.GetComponent<SpeechRecognition>().enabled = true;
-        }
+        }*/
 
         if (isPlayingVO == false && hasPlayedIntroVO == false)
         {
@@ -75,6 +83,42 @@ public class GameControllerS0 : MonoBehaviour {
         else if (isPlayingVO == false && hasPlayedIntroVO == true && hasTurnedOnLights == true && hasCountedDown == true && hasPlayedMaxwellVO == true && hasLiftedOff == true && hasStartedShuttle == false)
         {
             StartCoroutine(StartShuttle());
+        }
+
+        else if (isPlayingVO == false && hello == true)
+        {
+            object myCookie = new object();
+            isPlayingVO = true;
+            AkSoundEngine.PostEvent("Play_VO_MAXWELL_hello", Maxwell, (uint)AkCallbackType.AK_EndOfEvent, CheckWhenFinished, myCookie);
+            hello = false;
+        }
+        else if(isPlayingVO == false && howAreYou == true)
+        {
+            object myCookie = new object();
+            isPlayingVO = true;
+            AkSoundEngine.PostEvent("Play_VO_MAXWELL_howareyou", Maxwell, (uint)AkCallbackType.AK_EndOfEvent, CheckWhenFinished, myCookie);
+            howAreYou = false;
+        }
+        else if(isPlayingVO == false && niceToMeetYou == true)
+        {
+            object myCookie = new object();
+            isPlayingVO = true;
+            AkSoundEngine.PostEvent("Play_VO_MAXWELL_nicetomeetyou", Maxwell, (uint)AkCallbackType.AK_EndOfEvent, CheckWhenFinished, myCookie);
+            niceToMeetYou = false;
+        }
+        else if(isPlayingVO == false && bye == true)
+        {
+            object myCookie = new object();
+            isPlayingVO = true;
+            AkSoundEngine.PostEvent("Play_VO_MAXWELL_bye", Maxwell, (uint)AkCallbackType.AK_EndOfEvent, CheckWhenFinished, myCookie);
+            bye = false;
+        }
+        else if(isPlayingVO == false && intro == true)
+        {
+            object myCookie = new object();
+            isPlayingVO = true;
+            AkSoundEngine.PostEvent("Play_VO_MAXWELL_intro", Maxwell, (uint)AkCallbackType.AK_EndOfEvent, CheckWhenFinished, myCookie);
+            intro = false;
         }
     }
 

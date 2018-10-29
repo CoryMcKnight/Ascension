@@ -26,16 +26,10 @@ using UnityEngine.UI;
 using IBM.Watson.DeveloperCloud.Services.Conversation.v1;
 using FullSerializer;
 using IBM.Watson.DeveloperCloud.Connection;
+using UnityEngine.SceneManagement;
 
-public class SpeechRecognition : MonoBehaviour
+public class SpeechRecognitionS0 : MonoBehaviour
 {
-
-    //public GameManager gameManager;
-    //public AudioClip sorryClip;
-    //public List<AudioClip> helpClips;
-
-
-
     [SerializeField]
     private fsSerializer _serializer = new fsSerializer();
     private SpeechToText _speechToText;
@@ -54,8 +48,6 @@ public class SpeechRecognition : MonoBehaviour
     private string _conversationVersionDate = "2018-09-13";
     private string convo_workspaceId = "5794a517-db45-4cb9-8834-e74b86f76f7e";
 
-    //public Text ResultsField;
-
     private int _recordingRoutine = 0;
     private string _microphoneID = null;
     private AudioClip _recording = null;
@@ -63,6 +55,8 @@ public class SpeechRecognition : MonoBehaviour
     private int _recordingHZ = 22050;
 
     GameControllerS0 gameControllerS0;
+
+    private string sceneName;
 
 
     void Start()
@@ -80,7 +74,12 @@ public class SpeechRecognition : MonoBehaviour
 
         StartRecording();
 
+        Scene scene = SceneManager.GetActiveScene();
+        sceneName = scene.name;
+
+        //gameController = GameObject.Find("GameController").GetComponent<GameController>();
         gameControllerS0 = GameObject.Find("GameController").GetComponent<GameControllerS0>();
+
     }
 
     public bool Active
@@ -239,65 +238,100 @@ public class SpeechRecognition : MonoBehaviour
 
     void OnMessage(object resp, Dictionary<string, object> customData)
     {
-        //  Convert resp to fsdata
-
-        fsData fsdata = null;
-        fsResult r = _serializer.TrySerialize(resp.GetType(), resp, out fsdata);
-        if (!r.Succeeded)
-            throw new WatsonException(r.FormattedMessages);
-
-        //  Convert fsdata to MessageResponse
-        MessageResponse messageResponse = new MessageResponse();
-        object obj = messageResponse;
-        r = _serializer.TryDeserialize(fsdata, obj.GetType(), ref obj);
-        if (!r.Succeeded)
-            throw new WatsonException(r.FormattedMessages);
-
-        if (resp != null && (messageResponse.intents.Length > 0 || messageResponse.entities.Length > 0))
+        if (!gameControllerS0.isPlayingVO)
         {
-            string intent = messageResponse.intents[0].intent;
-            Debug.Log("Intent: " + intent);
+            //  Convert resp to fsdata
 
-            if (intent == "Hello")
+            fsData fsdata = null;
+            fsResult r = _serializer.TrySerialize(resp.GetType(), resp, out fsdata);
+            if (!r.Succeeded)
+                throw new WatsonException(r.FormattedMessages);
+
+            //  Convert fsdata to MessageResponse
+            MessageResponse messageResponse = new MessageResponse();
+            object obj = messageResponse;
+            r = _serializer.TryDeserialize(fsdata, obj.GetType(), ref obj);
+            if (!r.Succeeded)
+                throw new WatsonException(r.FormattedMessages);
+
+            if (resp != null && (messageResponse.intents.Length > 0 || messageResponse.entities.Length > 0))
             {
-                Debug.Log("Hello");
-                AkSoundEngine.PostEvent("Play_VO_MAXWELL_hello", gameObject);
+                string intent = messageResponse.intents[0].intent;
+                Debug.Log("Intent: " + intent);
 
-                foreach (RuntimeEntity entity in messageResponse.entities)
+                if (intent == "Hello")
                 {
+                    Debug.Log("Hello");
+                    gameControllerS0.hello = true;
+                    //AkSoundEngine.PostEvent("Play_VO_MAXWELL_hello", gameObject);
+
+                    foreach (RuntimeEntity entity in messageResponse.entities)
+                    {
+                    }
+                }
+                if (intent == "HowAreYou")
+                {
+                    Debug.Log("How are you");
+                    gameControllerS0.howAreYou = true;
+                    //AkSoundEngine.PostEvent("Play_VO_MAXWELL_howareyou", gameObject);
+
+                    foreach (RuntimeEntity entity in messageResponse.entities)
+                    {
+                    }
+                }
+                if (intent == "NiceToMeetYou")
+                {
+                    Debug.Log("Nice to meet you");
+                    gameControllerS0.niceToMeetYou = true;
+                    //AkSoundEngine.PostEvent("Play_VO_MAXWELL_nicetomeetyou", gameObject);
+
+                    foreach (RuntimeEntity entity in messageResponse.entities)
+                    {
+                    }
+                }
+                else if (intent == "Bye")
+                {
+                    Debug.Log("Bye");
+                    gameControllerS0.bye = true;
+                    //AkSoundEngine.PostEvent("Play_VO_MAXWELL_bye", gameObject);
+
+                    foreach (RuntimeEntity entity in messageResponse.entities)
+                    {
+                    }
+                }
+                else if (intent == "Intro")
+                {
+                    Debug.Log("Intro");
+                    gameControllerS0.intro = true;
+                    //AkSoundEngine.PostEvent("Play_VO_MAXWELL_intro", gameObject);
+
+                    foreach (RuntimeEntity entity in messageResponse.entities)
+                    {
+                    }
+                }
+                else if (intent == "Countdown")
+                {
+                    Debug.Log("Countdown");
+                    gameControllerS0.hasCountedDown = true;
+
+                    foreach (RuntimeEntity entity in messageResponse.entities)
+                    {
+                    }
+                }
+                else if (intent == "Liftoff")
+                {
+                    Debug.Log("Liftoff");
+                    gameControllerS0.hasLiftedOff = true;
+
+                    foreach (RuntimeEntity entity in messageResponse.entities)
+                    {
+                    }
                 }
             }
-            else if (intent == "Bye")
+            else
             {
-                Debug.Log("Bye");
-                AkSoundEngine.PostEvent("Play_VO_MAXWELL_bye", gameObject);
-
-                foreach (RuntimeEntity entity in messageResponse.entities)
-                {
-                }
-            }
-            else if (intent == "Intro")
-            {
-                Debug.Log("Intro");
-                AkSoundEngine.PostEvent("Play_VO_MAXWELL_intro", gameObject);
-
-                foreach (RuntimeEntity entity in messageResponse.entities)
-                {
-                }
-            }
-            else if (intent == "Countdown")
-            {
-                Debug.Log("Countdown");
-                gameControllerS0.hasCountedDown = true;
-
-                foreach (RuntimeEntity entity in messageResponse.entities)
-                {
-                }
-            }
-            else if (intent == "Liftoff")
-            {
-                Debug.Log("Liftoff");
-                gameControllerS0.hasLiftedOff = true;
+                Debug.Log("Anything else");
+                //AkSoundEngine.PostEvent("Play_PR_VO_001300_MAXWELL_lift_off_01", gameObject);
 
                 foreach (RuntimeEntity entity in messageResponse.entities)
                 {
@@ -306,12 +340,7 @@ public class SpeechRecognition : MonoBehaviour
         }
         else
         {
-            Debug.Log("Anything else");
-            //AkSoundEngine.PostEvent("Play_PR_VO_001300_MAXWELL_lift_off_01", gameObject);
-
-            foreach (RuntimeEntity entity in messageResponse.entities)
-            {
-            }
+            Debug.Log("Stop talking over me.");
         }
     }
 
