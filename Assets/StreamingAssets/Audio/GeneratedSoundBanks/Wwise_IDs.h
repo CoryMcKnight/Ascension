@@ -60,24 +60,18 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID PLAYER_MIC_INPUT_SOUNDBANK = 1426945817U;
+        static const AkUniqueID S0_SFX_SOUNDBANK = 1986997814U;
+        static const AkUniqueID S0_VO_SOUNDBANK = 3789213300U;
+        static const AkUniqueID S1_SFX_SOUNDBANK = 3171279295U;
         static const AkUniqueID S1_VO_SOUNDBANK = 20597623U;
-        static const AkUniqueID VO_MAXWELL_GLOBAL_SOUNDBANK = 3393795557U;
-        static const AkUniqueID VO_MAXWELL_INTRO_SOUNDBANK = 3306976482U;
-        static const AkUniqueID VS_AMBIENCE = 2176165327U;
-        static const AkUniqueID VS_S0_SOUNDBANK = 386084932U;
-        static const AkUniqueID VS_S0_SOUNDBANK_SFX = 2923184416U;
     } // namespace BANKS
 
     namespace BUSSES
     {
+        static const AkUniqueID _3D = 511093792U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MOTION_FACTORY_BUS = 985987111U;
     } // namespace BUSSES
-
-    namespace AUX_BUSSES
-    {
-        static const AkUniqueID REVERB_SCENE0 = 1733862568U;
-    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {

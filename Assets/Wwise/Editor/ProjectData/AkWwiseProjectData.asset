@@ -184,26 +184,15 @@ MonoBehaviour:
         ObjectType: 15
   AuxBusWwu:
   - Guid: '{2B7998AC-AFC2-411A-A976-C2952A194868}'
-    m_lastTimePart2: -1999228552
-    m_lastTimePsrt1: 547569164
+    m_lastTimePart2: -1999224324
+    m_lastTimePsrt1: -583909308
     ParentPhysicalPath: 
     PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
-    List:
-    - Guid: 800bfa294ffbf94eb8e50820b92d354d
-      ID: 1733862568
-      Name: Reverb_Scene0
-      Path: Default Work Unit\Master Audio Bus\Reverb_Scene0
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Master Audio Bus
-        ObjectType: 2
-      - ElementName: Reverb_Scene0
-        ObjectType: 1
+    List: []
   BankWwu:
   - Guid: '{110A314C-82AF-4BAD-A4BF-89AA702B6B7A}'
-    m_lastTimePart2: -1999227904
-    m_lastTimePsrt1: 1460095073
+    m_lastTimePart2: -1999224335
+    m_lastTimePsrt1: 254862575
     ParentPhysicalPath: 
     PhysicalPath: SoundBanks\Default Work Unit.wwu
     List:
@@ -216,55 +205,46 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Player_Mic_Input_Soundbank
         ObjectType: 7
-    - Guid: f4e03270f34de441a9c8315ffce28f70
-      ID: -901171739
-      Name: VO_MAXWELL_Global_Soundbank
-      Path: Default Work Unit\VO_MAXWELL_Global_Soundbank
+    - Guid: 33f75e24893cd84b909565bb73a7410d
+      ID: 1986997814
+      Name: S0_SFX_Soundbank
+      Path: Default Work Unit\S0_SFX_Soundbank
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: VO_MAXWELL_Global_Soundbank
-        ObjectType: 7
-    - Guid: 25e8489962c7d14ea64523a7c7024361
-      ID: -987990814
-      Name: VO_MAXWELL_Intro_Soundbank
-      Path: Default Work Unit\VO_MAXWELL_Intro_Soundbank
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: VO_MAXWELL_Intro_Soundbank
-        ObjectType: 7
-    - Guid: 69ae403b576f674d8e4f30059bdad1fb
-      ID: -2118801969
-      Name: VS_Ambience
-      Path: Default Work Unit\VS_Ambience
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: VS_Ambience
+      - ElementName: S0_SFX_Soundbank
         ObjectType: 7
     - Guid: 17c4af2364f60649ba040308052665ba
-      ID: 386084932
-      Name: VS_S0_Soundbank
-      Path: Default Work Unit\VS_S0_Soundbank
+      ID: -505753996
+      Name: S0_VO_Soundbank
+      Path: Default Work Unit\S0_VO_Soundbank
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: VS_S0_Soundbank
+      - ElementName: S0_VO_Soundbank
         ObjectType: 7
-    - Guid: 33f75e24893cd84b909565bb73a7410d
-      ID: -1371782880
-      Name: VS_S0_Soundbank_SFX
-      Path: Default Work Unit\VS_S0_Soundbank_SFX
+    - Guid: 7013c45e8fea9b44a7b59114260060c3
+      ID: -1123688001
+      Name: S1_SFX_Soundbank
+      Path: Default Work Unit\S1_SFX_Soundbank
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: VS_S0_Soundbank_SFX
+      - ElementName: S1_SFX_Soundbank
+        ObjectType: 7
+    - Guid: ec7090e24231d346a94195a349cf200b
+      ID: 20597623
+      Name: S1_VO_Soundbank
+      Path: Default Work Unit\S1_VO_Soundbank
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: S1_VO_Soundbank
         ObjectType: 7
   EventWwu:
   - Guid: '{DFCB7AA0-E338-4624-B782-27435196D705}'
-    m_lastTimePart2: -1999227923
-    m_lastTimePsrt1: -2042958372
+    m_lastTimePart2: -1999225892
+    m_lastTimePsrt1: -934915825
     ParentPhysicalPath: 
     PhysicalPath: Events\Default Work Unit.wwu
     List:
@@ -400,6 +380,138 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - Guid: 9a4947d4d1b57246b55cde2d0ae42fc0
+      ID: -777105867
+      Name: Play_VO_COMMANDER_backstory_where
+      Path: Default Work Unit\Play_VO_COMMANDER_backstory_where
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_VO_COMMANDER_backstory_where
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 97c40a9bd61e484eb0709c13b7ce1403
+      ID: -1541834948
+      Name: Play_VO_COMMANDER_backstory_who
+      Path: Default Work Unit\Play_VO_COMMANDER_backstory_who
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_VO_COMMANDER_backstory_who
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 0e5e2186c018b642b6ad054336ff62fb
+      ID: -921788531
+      Name: Play_VO_COMMANDER_bye
+      Path: Default Work Unit\Play_VO_COMMANDER_bye
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_VO_COMMANDER_bye
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: c37d667fab2b6f4a91ffeeeae9c48b5b
+      ID: 62458029
+      Name: Play_VO_COMMANDER_hello
+      Path: Default Work Unit\Play_VO_COMMANDER_hello
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_VO_COMMANDER_hello
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: b3341c558c0c1a4485ee53c0bdd77dc8
+      ID: 254179248
+      Name: Play_VO_COMMANDER_howareyou
+      Path: Default Work Unit\Play_VO_COMMANDER_howareyou
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_VO_COMMANDER_howareyou
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: bcf774e7eb440047886ec4dfe1a80a9e
+      ID: 575232135
+      Name: Play_VO_COMMANDER_intro
+      Path: Default Work Unit\Play_VO_COMMANDER_intro
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_VO_COMMANDER_intro
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 23c0344d9e71c840af6b65fa96d73ace
+      ID: -2098056696
+      Name: Play_VO_COMMANDER_narrative_houston
+      Path: Default Work Unit\Play_VO_COMMANDER_narrative_houston
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_VO_COMMANDER_narrative_houston
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 9e5da1bc26034345a368aede462bf671
+      ID: 586712829
+      Name: Play_VO_COMMANDER_narrative_task
+      Path: Default Work Unit\Play_VO_COMMANDER_narrative_task
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_VO_COMMANDER_narrative_task
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 5dcd97efa521734da5c470e72a68f878
+      ID: -668792346
+      Name: Play_VO_COMMANDER_narrative_when
+      Path: Default Work Unit\Play_VO_COMMANDER_narrative_when
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_VO_COMMANDER_narrative_when
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: d85dd7b6199bb344a1daa8ec69b43e66
+      ID: 958969067
+      Name: Play_VO_COMMANDER_narrative_where
+      Path: Default Work Unit\Play_VO_COMMANDER_narrative_where
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_VO_COMMANDER_narrative_where
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 7c79140a1cda9b4984751a6f1e2d9011
+      ID: 2000773447
+      Name: Play_VO_COMMANDER_nicetomeetyou
+      Path: Default Work Unit\Play_VO_COMMANDER_nicetomeetyou
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_VO_COMMANDER_nicetomeetyou
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - Guid: eddc684754cd4647b578aa4017d9b470
       ID: -609048168
       Name: Play_VO_JPLENGINEER_S0_intro
@@ -436,6 +548,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - Guid: f1c506ec61e49143b00805de91a0c9f9
+      ID: 1046929596
+      Name: Play_VO_MAXWELL_howareyou
+      Path: Default Work Unit\Play_VO_MAXWELL_howareyou
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_VO_MAXWELL_howareyou
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - Guid: f543d879b06b8341b9e3aec3c77992ce
       ID: -1462168701
       Name: Play_VO_MAXWELL_intro
@@ -448,36 +572,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - Guid: f1c506ec61e49143b00805de91a0c9f9
-      ID: -188281244
-      Name: Play_VO_MAXWELL_pleasantries_howareyou
-      Path: Default Work Unit\Play_VO_MAXWELL_pleasantries_howareyou
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Play_VO_MAXWELL_pleasantries_howareyou
-        ObjectType: 3
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - Guid: 487a9ac52100b842a05d5e9517164806
-      ID: -171836829
-      Name: Play_VO_MAXWELL_pleasantries_nicetomeetyou
-      Path: Default Work Unit\Play_VO_MAXWELL_pleasantries_nicetomeetyou
+      ID: 1277895451
+      Name: Play_VO_MAXWELL_nicetomeetyou
+      Path: Default Work Unit\Play_VO_MAXWELL_nicetomeetyou
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Play_VO_MAXWELL_pleasantries_nicetomeetyou
+      - ElementName: Play_VO_MAXWELL_nicetomeetyou
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
   ExpandedItems:
   - /Ascension_Wwise
-  - /Ascension_Wwise/Events
-  - /Ascension_Wwise/Events/Default Work Unit
-  - /Ascension_Wwise/SoundBanks
-  - /Ascension_Wwise/SoundBanks/Default Work Unit
   RtpcWwu:
   - Guid: '{9505FE3E-5B66-496D-A582-698E53A46146}'
     m_lastTimePart2: -1999228552

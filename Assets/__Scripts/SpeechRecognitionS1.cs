@@ -56,8 +56,6 @@ public class SpeechRecognitionS1 : MonoBehaviour
 
     GameControllerS1 gameControllerS1;
 
-    private string sceneName;
-
 
     void Start()
     {
@@ -73,9 +71,6 @@ public class SpeechRecognitionS1 : MonoBehaviour
         Active = true;
 
         StartRecording();
-
-        Scene scene = SceneManager.GetActiveScene();
-        sceneName = scene.name;
 
         gameControllerS1 = GameObject.Find("GameController").GetComponent<GameControllerS1>();
 

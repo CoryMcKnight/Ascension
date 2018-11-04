@@ -120,6 +120,18 @@ public class GameControllerS0 : MonoBehaviour {
             AkSoundEngine.PostEvent("Play_VO_MAXWELL_intro", Maxwell, (uint)AkCallbackType.AK_EndOfEvent, CheckWhenFinished, myCookie);
             intro = false;
         }
+
+        if (isPlayingVO == false && Input.GetKeyDown(KeyCode.Space))
+        {
+            if (hasCountedDown == false)
+            {
+                hasCountedDown = true;
+            }
+            else if (hasCountedDown == true && hasLiftedOff == false)
+            {
+                hasLiftedOff = true;
+            }
+        }
     }
 
     void CheckWhenFinished(object in_cookie, AkCallbackType in_type, object in_info)
