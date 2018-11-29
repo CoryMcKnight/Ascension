@@ -37,6 +37,7 @@ public class SpeechRecognitionS0 : MonoBehaviour
 
     private string stt_username = "0e10c402-b934-453f-9b72-d6c50f563ecf";
     private string stt_password = "kib31vffQPR6";
+    private string stt_apiKey = "OW3xqNu9Q6lkNfaKlDbOnkiuNN6m81RAI_C11XNx8YDt";
     // Change stt_url if different from below
     private string stt_url = "https://stream.watsonplatform.net/speech-to-text/api";
 
@@ -62,7 +63,8 @@ public class SpeechRecognitionS0 : MonoBehaviour
         LogSystem.InstallDefaultReactors();
 
         //  Create credential and instantiate service
-        Credentials stt_credentials = new Credentials(stt_username, stt_password, stt_url);
+        //Credentials stt_credentials = new Credentials(stt_username, stt_password, stt_url); //crystal creds
+        Credentials stt_credentials = new Credentials(stt_apiKey, stt_url); //mari creds
         Credentials convo_credentials = new Credentials(convo_username, convo_password, convo_url);
 
         _speechToText = new SpeechToText(stt_credentials);
